@@ -6,7 +6,6 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.StackPane;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -90,9 +89,9 @@ public class CurrencyAppController {
 
     public void drawNextDay() {
 
-        firstCurrency.updatePriceForNextDay();
+        firstCurrency.updatePrice();
 
-        secondCurrency.updatePriceForNextDay();
+        secondCurrency.updatePrice();
 
         lineChart.getData().get(0).getData().add(
                 new XYChart.Data<Integer, Double>(
